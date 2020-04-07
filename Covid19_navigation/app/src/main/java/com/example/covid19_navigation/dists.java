@@ -28,7 +28,7 @@ class Statename {
     }
 }
 class districtData{
-    Dist_name dist_name;
+    private Dist_name dist_name;
 
     public Dist_name getDist_name() {
         return dist_name;

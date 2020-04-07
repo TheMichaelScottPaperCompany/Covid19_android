@@ -29,6 +29,7 @@ import java.util.Random;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                startActivity(new Intent(MainActivity.this,com.example.covid19_navigation.graph.class));
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -62,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+       /* Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.example.com/")
+                .build();
+
+        api2 backendApi = retrofit.create(api2.class);
+*/
 
     }
 
